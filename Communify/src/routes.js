@@ -6,6 +6,7 @@ import FunctionsIcon from "@material-ui/icons/Functions";
 import ForumIcon from "@material-ui/icons/Forum";
 // import BubbleChart from "@material-ui/icons/BubbleChart";
 import ChatIcon from "@material-ui/icons/Chat";
+import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import InfoIcon from "@material-ui/icons/Info";
 import Notifications from "@material-ui/icons/Notifications";
 // import Unarchive from "@material-ui/icons/Unarchive";
@@ -18,6 +19,7 @@ import CalculatorPage from "views/CalculatorPage/CalculatorPage.js";
 import Icons from "views/Icons/Icons.js";
 import Maps from "views/Maps/Maps.js";
 import About from "views/About/About.js";
+import AlgoVisualizer from "./views/ALgoVisualizer/AlgoVisualizer";
 import NotificationsPage from "views/Notifications/Notifications.js";
 import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.js";
 
@@ -62,6 +64,13 @@ const dashboardRoutes = [
     name: "Messaging",
     icon: ChatIcon,
     component: Maps,
+    layout: "/admin",
+  },
+  {
+    path: "/http",
+    name: "Algo Visualizer",
+    icon: AccountTreeIcon,
+    component: AlgoVisualizer,
     layout: "/admin",
   },
   {
