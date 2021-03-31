@@ -1,19 +1,21 @@
+// core components
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
-// import Header from "./components/HeaderOne";
-import Header from "./components/Header";
-
-import Tables from "./components/Tables";
-import Slides from "./components/Slides";
+import Admin from "layouts/Admin.js";
+import "assets/css/Communify.css";
+import { createBrowserHistory } from "history";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
+  const hist = createBrowserHistory();
   return (
     <div>
-      <Header />
-      <Slides />
+      <Router history={hist}>
+        <Switch>
+          <Route path="/admin" component={Admin} />
+          <Redirect from="/" to="/admin/dashboard" />
+        </Switch>
+      </Router>
     </div>
-    // <Carousel/>
   );
 }
 
